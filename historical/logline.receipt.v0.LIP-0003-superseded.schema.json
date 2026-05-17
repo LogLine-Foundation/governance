@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logline.foundation/spec/receipt-encoding.schema.json",
+  "title": "LogLine Receipt Encoding",
+  "type": "object",
+  "required": [
+    "receipt_version",
+    "who",
+    "did",
+    "this",
+    "when",
+    "confirmed_by",
+    "if_ok",
+    "if_doubt",
+    "if_not",
+    "status"
+  ],
+  "not": {
+    "anyOf": [
+      {
+        "required": [
+          "body"
+        ]
+      },
+      {
+        "required": [
+          "selected_route"
+        ]
+      },
+      {
+        "required": [
+          "decision"
+        ]
+      }
+    ]
+  },
+  "properties": {
+    "receipt_version": {
+      "const": "logline-receipt-v0"
+    },
+    "who": {
+      "$ref": "#/$defs/token"
+    },
+    "did": {
+      "$ref": "#/$defs/token"
+    },
+    "this": {
+      "$ref": "#/$defs/token"
+    },
+    "when": {
+      "$ref": "#/$defs/token"
+    },
+    "confirmed_by": {
+      "$ref": "#/$defs/token"
+    },
+    "if_ok": {
+      "$ref": "#/$defs/token"
+    },
+    "if_doubt": {
+      "$ref": "#/$defs/token"
+    },
+    "if_not": {
+      "$ref": "#/$defs/token"
+    },
+    "status": {
+      "$ref": "#/$defs/token"
+    },
+    "result": {
+      "type": [
+        "object",
+        "array",
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "transport": {
+      "type": "object"
+    },
+    "hashes": {
+      "type": "object",
+      "properties": {
+        "json_canonicalization": {
+          "const": "jcs-rfc8785"
+        },
+        "tuple_hash_profile": {
+          "const": "logline-length-prefixed-v0"
+        },
+        "algorithm": {
+          "const": "sha256"
+        },
+        "tuple_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "result_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "receipt_hash": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "token": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
