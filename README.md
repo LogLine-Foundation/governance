@@ -42,6 +42,7 @@ Draft → Proposed → Accepted → Implemented → Superseded
 | LIP-0005 | Adapter declaration profile | Proposed |
 | LIP-0006 | Adapter conformance | Proposed |
 | LIP-0007 | Receipt three-layer hashing | Accepted (canon, in `LogLine-Foundation/canon`) |
+| LIP-0008 | LLM tier discipline and dossier discipline | Proposed |
 
 ## Authoring a new LIP
 
