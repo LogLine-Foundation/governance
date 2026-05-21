@@ -1,6 +1,6 @@
 # LIP-0005 - Adapter Declaration Profile
 
-Status: Draft
+Status: Proposed
 Type: Lateral canon extension
 Scope: Adapter declarations, manifests, effect classes, and projections
 Depends on: LIP-0004 Adapter Protocol

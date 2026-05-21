@@ -1,7 +1,7 @@
 ---
 lip: 0001
 title: Hardening do Canon e Conformidade Independente
-status: Proposed
+status: Accepted
 type: Normative / Process
 author: LogLine Foundation
 created: 2026-05-06

@@ -1,6 +1,6 @@
 # LIP-0006 - Adapter Conformance
 
-Status: Draft
+Status: Proposed
 Type: Lateral canon extension
 Scope: Adapter conformance cases and reporting
 Depends on: LIP-0004 Adapter Protocol, LIP-0005 Adapter Declaration Profile

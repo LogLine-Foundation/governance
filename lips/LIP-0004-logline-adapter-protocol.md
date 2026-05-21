@@ -1,6 +1,6 @@
 # LIP-0004 - LogLine Adapter Protocol
 
-Status: Draft
+Status: Proposed
 Type: Lateral canon extension
 Scope: Canonical contracts for external adapters
 Primary lateral normative source: `source/adapter-protocol.logline`
